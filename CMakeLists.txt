@@ -20,3 +20,23 @@ add_executable(cas ${SOURCES})
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
+
+# cmake_minimum_required(VERSION 3.0.0)
+# project(cas VERSION 0.1.0 LANGUAGES C)
+
+# # Set include directory
+# set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+# # Add header files directory to include path
+# include_directories(${INCLUDE_DIR})
+
+# # Add subdirectories for each module
+# add_subdirectory(src/module1)
+# add_subdirectory(src/module2)
+
+# # Add main executable
+# add_executable(cas src/main.c)
+
+# set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+# set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+# include(CPack)
