@@ -1,6 +1,8 @@
 #ifndef cas_compiler_h
 #define cas_compiler_h
 
-void compile(const char* source, Chunk* chunk);
+#include "vm.h"
+
+bool compile(const char* source, Chunk* chunk);
 
 #endif

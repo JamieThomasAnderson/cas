@@ -29,7 +29,7 @@ static bool isDigit(char c) {
 }
 
 static bool isAtEnd() {
-  return *scanner.current = '\0';
+  return *scanner.current == '\0';
 }
 
 static char advance() {
@@ -71,7 +71,7 @@ static Token errorToken(const char* message) {
   return token;
 }
 
-static char skipWhitespace() {
+static void skipWhitespace() {
   for (;;) {
     char c = peek();
     switch (c) {
@@ -133,16 +133,11 @@ static TokenType identifierType() {
           case 'r': return checkKeyword(2, 2, "ue", TOKEN_TRUE);
         }
       }
-      break
+      break;
     case 'v': return checkKeyword(1, 2, "ar", TOKEN_VAR);
     case 'w': return checkKeyword(1, 4, "hile", TOKEN_WHILE);
   }
   return TOKEN_IDENTIFIER;
-}
-
-static TokenType identifier() {
-    while (isAlpha(peek()) || isDigit(peek())) advance();
-    return makeToken(identifierType());
 }
 
 static Token identifier() {
