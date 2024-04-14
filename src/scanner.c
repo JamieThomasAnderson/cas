@@ -206,5 +206,6 @@ Token scanToken() {
     case '"': return string();
   }
 
+
   return errorToken("Unexpected Character");
 }
