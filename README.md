@@ -1,4 +1,6 @@
-```
+CAS
+============
+
 MIT License
 
 Copyright (c) 2023 Jamie Anderson
@@ -23,4 +25,3 @@ SOFTWARE.
 
 CAS is a toy language developed from 'Crafting Interpreters' by Robert Nystrom. 
 In heavy development.
-```
